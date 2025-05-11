@@ -41,10 +41,11 @@ go test -v ./...
 go test -bench=. -benchtime=5x
 
 ## Benchmarks Results：
-Using goroutines 
-![Result 1](result1.png)
-Not using goroutines 
-![Result 2](result2.png)
+Using goroutines  
+![Result 1](result1.png)  
+
+Not using goroutines  
+![Result 2](result2.png)  
 
 The benchmark results clearly demonstrate that the concurrent image processing pipeline using goroutines performs significantly better than the sequential version:
 
