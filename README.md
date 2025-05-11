@@ -16,6 +16,10 @@ This project is a replication and extension of [Amrit Singh's image processing p
 -  Unit tests and benchmark testing
 
 # Examples output
+Output images are saved to images/output/ with suffixes like:
+
+_final.png → after grayscale + brightness + alpha
+_blurred.jpg, _rotated.jpg → for matrix tests
 ## Original Image
 ![Original Image](images/test.png)
 
@@ -53,12 +57,6 @@ Concurrent pipeline: 495,122,367 ns/op
 Sequential pipeline: 1,221,597,600 ns/op
 
 This  the concurrent version is approximately 2.47× faster than the sequential version under the same image set and processing logic (grayscale → brightness enhancement → alpha adjustment). This improvement is due to effective use of Go’s channel-based goroutines, which allow different stages of the pipeline to process images in parallel.
-
-## Example Output
-Output images are saved to images/output/ with suffixes like:
-
-_final.png → after grayscale + brightness + alpha
-_blurred.jpg, _rotated.jpg → for matrix tests
 
 ## GenAI Tools
 This project used ChatGPT (OpenAI GPT-4) assisting for:
