@@ -23,7 +23,7 @@ This project is a replication and extension of [Amrit Singh's image processing p
 ![Processed Image1](images/output/test_blurred.jpg)
 
 ### Scale + Transparency Adjustment + brightness adjustment
-![Processed Image2](images/output/test_blurred.jpg)
+![Processed Image2](images/output/test_final.png)
 
 ---
 ## How to Run
