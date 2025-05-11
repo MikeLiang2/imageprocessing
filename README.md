@@ -40,6 +40,19 @@ go test -v ./...
 ## Run Benchmarks
 go test -bench=. -benchtime=5x
 
+## Benchmarks Results：
+Using goroutines 
+![Result 1](result1.png)
+Not using goroutines 
+![Result 2](result2.png)
+
+The benchmark results clearly demonstrate that the concurrent image processing pipeline using goroutines performs significantly better than the sequential version:
+
+Concurrent pipeline: 495,122,367 ns/op
+Sequential pipeline: 1,221,597,600 ns/op
+
+This  the concurrent version is approximately 2.47× faster than the sequential version under the same image set and processing logic (grayscale → brightness enhancement → alpha adjustment). This improvement is due to effective use of Go’s channel-based goroutines, which allow different stages of the pipeline to process images in parallel.
+
 ## Example Output
 Output images are saved to images/output/ with suffixes like:
 
